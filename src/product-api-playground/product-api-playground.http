@@ -1,0 +1,6 @@
+@product_api_playground_HostAddress = http://localhost:5003
+
+GET {{product_api_playground_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
