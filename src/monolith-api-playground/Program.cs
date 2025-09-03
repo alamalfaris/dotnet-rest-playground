@@ -1,6 +1,7 @@
 
 using Microsoft.Data.SqlClient;
 using monolith_api_playground.Repositories;
+using Serilog;
 using System.Data;
 
 namespace monolith_api_playground
@@ -12,6 +13,14 @@ namespace monolith_api_playground
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
+            // Konfigurasi Serilog via appsettings.json
+            Log.Logger = new LoggerConfiguration()
+                .ReadFrom.Configuration(builder.Configuration)
+                .Enrich.FromLogContext()
+                .CreateLogger();
+
+            builder.Host.UseSerilog(); // Ganti default logger dengan Serilog
+
             var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
             builder.Services.AddScoped<IDbConnection>(sp => new SqlConnection(connectionString));
 

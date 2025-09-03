@@ -9,15 +9,18 @@ namespace monolith_api_playground.Controllers
     public class StoreController : ControllerBase
     {
         private readonly IStoreRepository _storeRepository;
+        private readonly ILogger<StoreController> _logger;
 
-        public StoreController(IStoreRepository storeRepository)
+        public StoreController(IStoreRepository storeRepository, ILogger<StoreController> logger)
         {
             _storeRepository = storeRepository;
+            _logger = logger;
         }
 
         [HttpGet("enum")]
         public async Task<IActionResult> GetStoresEnumAsync()
         {
+            _logger.LogInformation("GetStoresEnumAsync hitted..");
             return Ok(await _storeRepository.GetStoresEnumAsync());
         }
 
