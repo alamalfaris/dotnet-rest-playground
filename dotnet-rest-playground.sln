@@ -7,6 +7,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{02EA681E-C7D
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "monolith-api-playground", "src\monolith-api-playground\monolith-api-playground.csproj", "{D8BAFA14-2986-4835-97F8-DCC07CC9BEDB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "monolith-api-playground-benchmark", "src\monolith-api-playground-benchmark\monolith-api-playground-benchmark.csproj", "{447D8F2D-5BF9-4B2D-AD67-2A5BDFA93481}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,12 +19,17 @@ Global
 		{D8BAFA14-2986-4835-97F8-DCC07CC9BEDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D8BAFA14-2986-4835-97F8-DCC07CC9BEDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D8BAFA14-2986-4835-97F8-DCC07CC9BEDB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{447D8F2D-5BF9-4B2D-AD67-2A5BDFA93481}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{447D8F2D-5BF9-4B2D-AD67-2A5BDFA93481}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{447D8F2D-5BF9-4B2D-AD67-2A5BDFA93481}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{447D8F2D-5BF9-4B2D-AD67-2A5BDFA93481}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{D8BAFA14-2986-4835-97F8-DCC07CC9BEDB} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{447D8F2D-5BF9-4B2D-AD67-2A5BDFA93481} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5806C111-32E2-45C0-BBE7-6158FE850B56}

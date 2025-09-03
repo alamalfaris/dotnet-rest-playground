@@ -1,4 +1,8 @@
 
+using Microsoft.Data.SqlClient;
+using monolith_api_playground.Repositories;
+using System.Data;
+
 namespace monolith_api_playground
 {
     public class Program
@@ -8,6 +12,10 @@ namespace monolith_api_playground
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
+            var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+            builder.Services.AddScoped<IDbConnection>(sp => new SqlConnection(connectionString));
+
+            builder.Services.AddScoped<IStoreRepository, StoreRepository>();
 
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
