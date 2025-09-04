@@ -17,17 +17,11 @@ namespace monolith_api_playground.Controllers
             _logger = logger;
         }
 
-        [HttpGet("enum")]
+        [HttpGet]
         public async Task<IActionResult> GetStoresEnumAsync()
         {
             _logger.LogInformation("GetStoresEnumAsync hitted..");
             return Ok(await _storeRepository.GetStoresEnumAsync());
-        }
-
-        [HttpGet("list")]
-        public async Task<IActionResult> GetStoresListAsync()
-        {
-            return Ok(await _storeRepository.GetStoresListAsync());
         }
     }
 }
